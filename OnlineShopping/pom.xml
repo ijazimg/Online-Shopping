@@ -14,6 +14,14 @@
 	</properties>
 
 	<dependencies>
+	
+	<!-- Linking backend with front end -->
+	
+	<dependency>
+	<groupId>com.infoTech</groupId>
+	<artifactId>ShoppingBackEnd</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 		<!-- Spring dependency -->
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
