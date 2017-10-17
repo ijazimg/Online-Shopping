@@ -9,8 +9,8 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-	<context:component-scan base-package="com.infoTech.onlinehopping.controller" />
-	<context:component-scan base-package="com.infoTech.shoppingbackend.daoimpl" />
+	<context:component-scan base-package="com.infoTech.onlineshopping" />
+	<context:component-scan base-package="com.infoTech.shoppingbackend" />
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		

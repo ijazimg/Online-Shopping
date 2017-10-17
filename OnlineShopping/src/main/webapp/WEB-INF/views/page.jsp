@@ -16,7 +16,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Online Shopping Website Using Spring MVC and Hibernate">
+<meta name="description"
+	content="Online Shopping Website Using Spring MVC and Hibernate">
 <meta name="author" content="Khozema Nullwala">
 <meta name="_csrf" content="${_csrf.token}">
 <meta name="_csrf_header" content="${_csrf.headerName}">
@@ -25,9 +26,8 @@
 
 <script>
 	window.menu = '${title}';
-	
+
 	window.contextRoot = '${contextRoot}'
-	
 </script>
 
 <!-- Bootstrap Core CSS -->
@@ -54,7 +54,7 @@
 </head>
 
 <body>
-	
+
 	<div class="se-pre-con"></div>
 	<div class="wrapper">
 
@@ -64,7 +64,7 @@
 		<!-- Page Content -->
 
 		<div class="content">
-			
+
 			<!-- Loading the home content -->
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
@@ -79,13 +79,17 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
 			<!-- Load only when user clicks contact -->
-			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
-			</c:if>	
-			
-	
+			</c:if>
+			<!-- Load only when user clicks on signle proudct -->
+			<c:if test="${userClickSingleProduct == true }">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+
 
 		</div>
 
@@ -95,8 +99,15 @@
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
-		
-	
+		<!-- boot srtap -->
+		<script src="${js}/bootstrap.js"></script>
+		<!-- DAta tabel jquery -->
+		<script src="${js}/jquery.dataTables.js"></script>
+
+		<!-- boot srtap -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+
+
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
 
